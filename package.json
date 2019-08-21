@@ -1,5 +1,5 @@
 {
-  "name": "lazy-loader",
+  "name": "@alessandrodias/lazy-loader",
   "description": "Lazy load images using Intersection Observer",
   "version": "1.0.0",
   "repository": "https://github.com/alessandrodias/lazy-loader.git",
