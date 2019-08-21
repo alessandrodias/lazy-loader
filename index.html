@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +7,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Lazy Loader</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    }
-
-    .intro {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .intro h1 {
-      font-size: 40px;
-      margin: 20px auto;
-      color: #202020;
-    }
-
-    .intro p {
-      font-size: 28px;
-      margin: 20px auto;
-      color: #202020;
-    }
-
-    .container {
-      display: block;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-
-    .frame {
-      margin: 100px auto;
-      padding: 10px;
-      background: #f9f9f9;
-      border-radius: 10px;
-    }
-
-    .frame img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -63,20 +18,22 @@
     </div>
 
     <div class="frame">
-      <img src="images/fox.jpg" alt="Curious Fox">
+      <img data-lazy-src="images/fox.jpg" alt="Curious Fox">
     </div>
 
     <div class="frame">
-      <img src="images/leopard.jpg" alt="Leopard pose">
+      <img data-lazy-src="images/leopard.jpg" alt="Leopard pose">
     </div>
 
     <div class="frame">
-      <img src="images/elephant.jpg" alt="Elephant following the leader">
+      <img data-lazy-src="images/elephant.jpg" alt="Elephant following the leader">
     </div>
 
     <div class="frame">
-      <img src="images/turltle.jpg" alt="Turtle swimming">
+      <img data-lazy-src="images/turltle.jpg" alt="Turtle swimming">
     </div>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

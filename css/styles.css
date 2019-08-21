@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 40px;
+  margin: 20px auto;
+  color: #202020;
+}
+
+.intro p {
+  font-size: 28px;
+  margin: 20px auto;
+  color: #202020;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.frame {
+  margin: 100px auto;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.frame img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
