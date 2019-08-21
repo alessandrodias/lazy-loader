@@ -8,7 +8,7 @@ Lazy load images using Intersection Observer.
 npm i @alessandrodias/lazy-loader
 
 # Yarn
-yarn @alessandrodias/lazy-loader
+yarn add @alessandrodias/lazy-loader
 ```
 
 ## Usage:
