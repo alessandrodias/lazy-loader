@@ -4,11 +4,11 @@ window.addEventListener('load',  () => {
   new LazyLoader({
     rootMargin: '50px 0px',
     threshold: 0.3,
-    callback: onLoadComplete
+    callback: imagesLoaded
   });
 
   // calback function
-  function onLoadComplete() {
+  function imagesLoaded() {
     setTimeout(() => {
       document.getElementById('load-complete').classList.add('show');
     }, 300);
