@@ -5,6 +5,7 @@ body {
 }
 
 .intro {
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@ body {
 
 .container {
   display: block;
+  padding: 16px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -41,4 +43,21 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+.load-complete {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  transform: translateX(100%);
+  padding: 10px;
+  font-size: 16px;
+  background: #58ad53;
+  color: #fff;
+  border-radius: 8px 0 0 8px;
+  transition: 300ms all cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.load-complete.show {
+  transform: translateX(0);
 }

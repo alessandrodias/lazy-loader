@@ -5,7 +5,15 @@
   "repository": "https://github.com/alessandrodias/lazy-loader.git",
   "author": "Alessandro Dias",
   "license": "MIT",
+  "scripts": {
+    "watch": "webpack --progress --watch"
+  },
   "dependencies": {
-    "intersection-observer": "^0.7.0"
+    "@alessandrodias/lazy-loader": "^1.0.2",
+    "intersection-observer": "^0.7.0",
+    "webpack": "^4.39.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.7"
   }
 }
