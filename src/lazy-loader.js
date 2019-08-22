@@ -1,21 +1,29 @@
 require('intersection-observer');
 
 export default class LazyLoader {
-  constructor(callback) {
+  constructor(options) {
     this.observer = null;
-    this.callback = callback;
     this.images = Array.from(document.querySelectorAll('[data-lazy-src]'));
     this.imagesToLoad = this.images.length;
-    this.config = {
+    this.options = {
       rootMargin: '50px 0px',
-      threshold: 0.01
+      threshold: 0.3,
+      callback: null
     };
+
+    this.getCustomOptions(options);
+  }
+
+  getCustomOptions(options) {
+    if (options) {
+      Object.assign(this.options, options);
+    }
 
     this.setupObserver();
   }
 
   setupObserver() {
-    this.observer = new IntersectionObserver(this.onIntersection.bind(this), this.config);
+    this.observer = new IntersectionObserver(this.onIntersection.bind(this), this.options);
 
     this.images.forEach(image => {
       this.observer.observe(image);
@@ -63,8 +71,8 @@ export default class LazyLoader {
   checkLoadComplete() {
     this.imagesToLoad--;
 
-    if ((this.imagesToLoad < 1) && (typeof this.callback === 'function')) {
-      this.callback();
+    if ((this.imagesToLoad < 1) && (typeof this.options.callback === 'function')) {
+      this.options.callback();
     }
   }
 }
