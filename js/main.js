@@ -1,11 +1,16 @@
 import LazyLoader from '@alessandrodias/lazy-loader/src/lazy-loader';
 
 window.addEventListener('load',  () => {
-   new LazyLoader(onLoadComplete);
+  new LazyLoader({
+    rootMargin: '50px 0px',
+    threshold: 0.3,
+    callback: onLoadComplete
+  });
 
-   function onLoadComplete() {
-     setTimeout(() => {
-       document.getElementById('load-complete').classList.add('show');
-     }, 300);
-   }
+  // calback function
+  function onLoadComplete() {
+    setTimeout(() => {
+      document.getElementById('load-complete').classList.add('show');
+    }, 300);
+  }
 });
