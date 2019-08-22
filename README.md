@@ -20,7 +20,7 @@ Replace the `src` attribute from images with the `data-lazy-src` attribute
 
 Instantiate the class to lazy load the images
 ```javascript
-import LazyLoader from './js-modules/lazy-loader';
+import LazyLoader from '@alessandrodias/lazy-loader/src/lazy-loader';
 
 new LazyLoader();
 ```
